@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 class Navigation extends Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             title: "To-Do List",
-            count: this.props.count
+            count: 10
         }
     }
 
@@ -13,7 +13,7 @@ class Navigation extends Component {
         return (
             <div>
             <nav className="navbar">
-                <a href = "" className="text-dart"> {this.state.title} - <span class="badge badge-primary">{this.state.count}</span>  </a>
+                <a href = "" className="text-dart"> {this.props.title} </a>
             </nav>
             </div>
         );

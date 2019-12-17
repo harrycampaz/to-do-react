@@ -1,0 +1,22 @@
+{
+    "todo-list": [
+        {
+            "title": "tack 1",
+            "responsible": "Harry",
+            "description": "Hacer tarea 1",
+            "priority": "low"
+        },
+        {
+            "title": "tack 2",
+            "responsible": "Anderson",
+            "description": "Hacer tarea 2",
+            "priority": "medium"
+        },
+        {
+            "title": "tack 3",
+            "responsible": "Campaz",
+            "description": "Hacer tarea 3",
+            "priority": "high"
+        }
+    ]
+}

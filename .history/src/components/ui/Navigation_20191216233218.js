@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 
 class Navigation extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-            title: "To-Do List",
-            count: this.props.count
-        }
-    }
-
+        // No hagas esto!
+        this.state = { color: props.color };
+       }
     render() {
         return (
             <div>
             <nav className="navbar">
-                <a href = "" className="text-dart"> {this.state.title} - <span class="badge badge-primary">{this.state.count}</span>  </a>
+                <a href = "" className="text-dart"> {this.props.title} </a>
             </nav>
             </div>
         );

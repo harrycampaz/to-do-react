@@ -7,12 +7,12 @@ import todos from "../src/dummy-data/todo-list.json";
 
  
 function App() {
-  console.log(todos.todos.length);
+  console.log(todos);
   
   return (
     <div className="App">
 
-      <Navigation count ={todos.todos.length}/>
+      <Navigation/>
 
       <div>
         <img src ={logo} className = "App-logo"></img>

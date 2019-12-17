@@ -3,16 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/ui/Navigation';
 import ListTask from './components/ListTask';
-import todos from "../src/dummy-data/todo-list.json";
+
 
  
 function App() {
-  console.log(todos.todos.length);
-  
   return (
     <div className="App">
 
-      <Navigation count ={todos.todos.length}/>
+      <Navigation/>
 
       <div>
         <img src ={logo} className = "App-logo"></img>
@@ -20,10 +18,7 @@ function App() {
 
    
    <div className="container">
-    
-     <ListTask/>
-
-  
+   <ListTask/>
    </div>
      
     

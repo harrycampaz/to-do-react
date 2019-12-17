@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
 
-      <Navigation count ={todos.todos.length}/>
+      <Navigation/>
 
       <div>
         <img src ={logo} className = "App-logo"></img>
