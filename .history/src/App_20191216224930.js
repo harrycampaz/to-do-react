@@ -1,16 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navigation from './components/ui/Navigation';
 
 function App() {
   return (
     <div className="App">
 
-      <Navigation />
+      <nav>
+        Titulo
+      </nav>
       <div>
         <img src ={logo} className = "App-logo"></img>
       </div>
+
+      <div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
     </div>
   );
 }
