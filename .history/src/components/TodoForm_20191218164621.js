@@ -11,8 +11,7 @@ class TodoForm extends Component {
             priority: 'low'
         };
 
-        this.handleInput = this.handleInput.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInput = this.handleInput;
     }
     
 
@@ -24,22 +23,16 @@ class TodoForm extends Component {
             [name]: value
         })
 
-        
-    }
-
-    handleSubmit(e){
-        
-        e.preventDefault();
-
-        this.props.onAddTodo(this.state)
         console.log(this.state);
+        
+        
     }
 
     render() {
         return (
            
             <div className="card">
-            <form className="card-body" onSubmit = {this.handleSubmit}>
+            <form className="card-body">
               <div className="form-group">
                 <input
                   type="text"

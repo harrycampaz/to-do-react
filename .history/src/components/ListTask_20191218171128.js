@@ -21,14 +21,11 @@ class ListTask extends Component {
   removeTodo(index) {
     console.log(index);
 
-    if(window.confirm('Are you sure')){
-      this.setState({
-        todos: this.state.todos.filter((e, i) => {
-          return i !== index
-        })
+    this.setState({
+      todos: this.state.todos.filter((e, i) => {
+        return i !== index
       })
-    }
-
+    })
   }
 
   render() {

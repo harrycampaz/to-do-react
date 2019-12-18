@@ -2,44 +2,17 @@ import React, { Component } from 'react';
 
 class TodoForm extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: '',
-            responsible: '',
-            description: '',
-            priority: 'low'
-        };
-
-        this.handleInput = this.handleInput.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    
-
     handleInput(e){
 
-       const  {value, name}  = e.target;
-
-        this.setState({
-            [name]: value
-        })
-
+        console.log(e.target.value, e.target.name);
         
-    }
-
-    handleSubmit(e){
-        
-        e.preventDefault();
-
-        this.props.onAddTodo(this.state)
-        console.log(this.state);
     }
 
     render() {
         return (
            
             <div className="card">
-            <form className="card-body" onSubmit = {this.handleSubmit}>
+            <form className="card-body">
               <div className="form-group">
                 <input
                   type="text"
@@ -56,7 +29,6 @@ class TodoForm extends Component {
                   type="text"
                   name="responsible"
                   className="form-control"
-                  onChange = {this.handleInput}
                   placeholder="Responsible"
                   />
               </div>
@@ -65,7 +37,7 @@ class TodoForm extends Component {
                   type="text"
                   name="description"
                   className="form-control"
-                  onChange = {this.handleInput}
+                 
                   placeholder="Description"
                   />
               </div>
@@ -73,7 +45,6 @@ class TodoForm extends Component {
                 <select
                     name="priority"
                     className="form-control"
-                    onChange = {this.handleInput}
                   >
                   <option>low</option>
                   <option>medium</option>

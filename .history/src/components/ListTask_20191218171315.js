@@ -21,7 +21,7 @@ class ListTask extends Component {
   removeTodo(index) {
     console.log(index);
 
-    if(window.confirm('Are you sure')){
+    if(windows.confirm('Are you sure')){
       this.setState({
         todos: this.state.todos.filter((e, i) => {
           return i !== index

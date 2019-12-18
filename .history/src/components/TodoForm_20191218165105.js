@@ -12,7 +12,6 @@ class TodoForm extends Component {
         };
 
         this.handleInput = this.handleInput.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
 
@@ -27,11 +26,7 @@ class TodoForm extends Component {
         
     }
 
-    handleSubmit(e){
-        
-        e.preventDefault();
-
-        this.props.onAddTodo(this.state)
+    handleSubmit(){
         console.log(this.state);
     }
 

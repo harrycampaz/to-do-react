@@ -9,32 +9,25 @@ class ListTask extends Component {
     this.state = {
       todos: todos.todos
     };
-    this.handlerAddToto = this.handlerAddToto.bind(this);
+    this.handlerAddToto = this.handlerAddToto.bind(this)
   }
 
-  handlerAddToto(todo) {
+
+
+  handlerAddToto(todo){
     this.setState({
       todos: [...this.state.todos, todo]
-    });
+    })
   }
 
-  removeTodo(index) {
-    console.log(index);
-
-    if(window.confirm('Are you sure')){
-      this.setState({
-        todos: this.state.todos.filter((e, i) => {
-          return i !== index
-        })
-      })
-    }
+  removeTodo(){
 
   }
 
   render() {
     const data = this.state.todos.map((todo, i) => {
       return (
-        <div className="col-sm-4 mt-2" key={i}>
+        <div className="col-sm-4 mt-2" key ={i}>
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">{todo.title}</h5>
@@ -46,11 +39,13 @@ class ListTask extends Component {
                 <small className="text-muted">{todo.priority}</small>
               </p>
               <div className="card-footer">
-                <button
-                  className="btn btn-danger"
-                  onClick={this.removeTodo.bind(this, i)}>
-                  Delete
-                </button>
+
+<button
+className ="btn btn-danger"
+>
+  Delete
+</button>
+
               </div>
             </div>
           </div>
@@ -58,14 +53,11 @@ class ListTask extends Component {
       );
     });
 
-    return (
-      <div className="row">
-        <div className="col-sm-4">
-          <TodoForm onAddTodo={this.handlerAddToto} />
-        </div>
-        {data}
+    return <div className="row">
+      <div className="col-sm-4">
+        <TodoForm onAddTodo={this.handlerAddToto} />
       </div>
-    );
+      {data}</div>;
   }
 }
 

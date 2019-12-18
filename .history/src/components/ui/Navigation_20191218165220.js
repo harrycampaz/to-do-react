@@ -13,7 +13,7 @@ class Navigation extends Component {
         return (
             <div>
             <nav className="navbar">
-                <a href = "#" className="text-dart"> {this.state.title} - <span className="badge badge-primary">{this.state.count}</span>  </a>
+                {/* <a href = "#" className="text-dart"> {this.state.title} - <span className="badge badge-primary">{this.state.count}</span>  </a> */}
             </nav>
             </div>
         );
